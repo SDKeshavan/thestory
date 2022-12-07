@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<style>
+#p{
+	margin:auto;
+	font-family:Garamond;
+}
+</style>
+</head>
+<body>
+<script>
+function pswdfunc(){
+	var pwd = document.getElementById("pswd").value;
+	if( pwd == "hello"){
+	window.open("Quotes.html");
+	} else{
+	document.getElementById("dis").innerHTML="Incorrect";
+	}
+}
+</script>
+<div id="p">
+Password: <input type="password" id="pswd">
+<button type="button" onclick="pswdfunc()">Submit</button>
+<p id="dis"></p>
+</div>

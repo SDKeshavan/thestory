@@ -1,0 +1,743 @@
+/*Designed by SDKeshavan*/
+
+body{
+    margin:0;
+    padding:0;
+    background-image: url(weladdbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    scroll-behavior: smooth;
+}
+
+header{
+    height:100px;
+    background-color: #000;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    right: 0;
+    left:0;
+    z-index: 1;
+}
+
+h1{
+    margin: 0;
+    margin-top: -25px;
+    color:#fff;
+    padding: 0;
+    font-size: calc(40px + 1.5vw);
+    font-family:'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+.catchy-phrase{
+    display: block;
+    position: absolute;
+    color: #fff;
+    top:47px;
+    font-size: calc(15px + 0.2vw);
+    letter-spacing: calc(3px + 0.3vw);
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    padding-left: 10px;
+}
+
+.line{
+    position: absolute;
+    bottom:-9px;
+    border: none;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,pink, blue, violet, red , yellow );
+    background-repeat: no-repeat;
+    background-size: 250vw;
+    background-position: left;
+    animation: lineAnime 10s infinite alternate linear;
+    z-index: 5;
+    transition: bottom 200ms;
+}
+
+@keyframes lineAnime {
+    from{background-position:left;}
+    to{background-position: right;}
+    
+}
+
+/*----------------------------------------------------------*/
+
+/*Scroll Bar style*/ 
+
+::-webkit-Scrollbar{
+	width:8px;
+    height:3px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(50, 50, 50);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: pink;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(196, 138, 148);
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*Menu bar Styles*/
+
+.menu-bar-cont{
+    position: absolute;
+    right:calc(10px + 3vw);
+    cursor:pointer;
+}
+
+
+#bar1, #bar2, #bar3{
+    height:2px;
+    width:20px;
+    margin-top: 4px;
+    background-color:#fff;
+    border-radius:5px;
+    transition: transform 200ms;
+}
+
+#navmenu{
+    position: absolute;
+    right: 0;
+    left:0;
+    top:100px;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: height 200ms, border-top 200ms;
+}
+
+li{
+    list-style-type: none;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration: none;
+    font-size: calc(10px + 1vw);
+    font-family:monospace;
+    transition: color 150ms;
+}
+.nav-links a:hover:not(.active){
+    color:pink;
+}
+
+.active{
+    color:pink;
+    border-bottom: 1px solid pink;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*Info Button Styles*/
+
+.info-button{
+    position: absolute;
+    width: 6px;
+    height:6px;
+    padding:5px;
+    background-color:#fff;
+    border-radius:50%;
+    left:calc(10px + 3vw);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.info-list{
+    position:absolute;
+    top:90px;
+    left:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0;
+    overflow:hidden;
+    transition: height 200ms;
+    z-index: -1;
+}
+
+.info-head{
+    margin: 30px 0;
+    padding: 5px;
+    background-color: #fff;
+    color:#000;
+    font-size: 200%;
+    border-radius: 15px;
+    display: inline-block;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+
+.info-content{
+    font-size: 150%;
+    background-color: #fff;
+    display: flex;
+    margin: 0 15vw;
+    padding:5px;
+    border-radius: 15px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*Quotes style section*/
+
+.quote{
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgb(0, 0, 0);
+    color: #000;
+    font-size: calc(14px + 0.5vw);
+    border-radius: 15px 0 ;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-variant:small-caps;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*Quote topic style*/
+
+.quote-topic{
+    background-color: #fff;
+    border-radius: 10px 0;
+    font-size:calc(15px + 0.5vw);
+    font-family: 'Times New Roman', Times, serif;
+    grid-template-columns: 1fr;
+    cursor: pointer;
+    transition:250ms;
+}
+
+.quote-topic-links{
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+/*-----------------------------------------Sample------------------------*/
+
+.main-quote-topic{
+    font-size: calc(50px + 2vw);
+    padding: 10px 10vw;
+    color: #fff;
+}
+
+.quote-page-topic-links{
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px #fff;
+    color: transparent;
+    letter-spacing: 7px;
+    font-variant: small-caps;
+    transition: color 250ms;
+}
+
+.l{
+    text-align: left;
+}
+.r{
+    text-align: right;
+}
+
+.quote-topic-main-a-grid{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 80px;
+    padding:20px 30px;
+}
+
+/*-----------------------------------------Sample-end------------------------*/
+
+@media(hover:hover){
+    .quote-topic:hover{
+        transform: scale(1.03, 1.03);
+        border-radius:0 10px;
+        box-shadow: 0 0 25px 10px #000;
+        letter-spacing: 1px;
+        z-index: 0;
+    }
+    .quote-page-topic-links:hover{
+        color: #fff;
+    }
+}
+
+/*quote page style*/
+
+.quote-topic-main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    grid-auto-rows: 70px;
+    padding: 0 7vw 50px 7vw;
+}
+/*
+.quote-page-topic{
+    font-size: calc(30px + 2vw);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:transparent;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 20px 0;
+    transition: color 200ms, background-color 200ms, border-radius 200ms;
+
+}
+
+.quote-page-topic:hover{
+    background-color: white;
+    color: transparent;
+    border-radius: 0 20px;
+} */
+
+.other-quote-topics-grid{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 20px 10px;
+    grid-auto-columns: 200px;
+    gap:20px;
+    grid-template-rows: 60px;
+    overflow-x: scroll;
+}
+
+.quotes-grid{
+    padding: 50px 20px;
+}
+
+
+/*------------------------------------------------*/
+
+/*grid span*/
+
+.grid-column-span, .special-case{
+    grid-column: span 2;
+}
+
+.grid-row-span{
+    grid-row: span 2;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*line style*/
+.sub-head-line{
+    border:none;
+    border-top: 1px solid rgb(255, 192, 203);
+    height: 0px;
+    margin:30px 8vw;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*Home Paage Animation*/
+
+@keyframes rightslide {
+    from{margin-left: -100vw;}
+    to{margin-left: 0;}
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*Home Page content*/
+
+.home-page-content{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 40px 60px 40px;
+    transition: margin-top 200ms, opacity 200ms;
+}
+
+.sub-heading{
+    font-size: calc(15px + 1vw);
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+/* .quote-of-the-day{
+    animation: rightslide 1s 1 linear;
+} */
+
+.popular-quotes-grid, .quotes-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+}
+
+.quote-topic-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+    grid-auto-rows: 60px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*About page style*/
+.about-page-greeting{
+    margin: 30px 0;
+    font-size: calc(3vw + 35px);
+    color:transparent;
+    -webkit-text-stroke: 0.5px #fff;
+}
+
+.about-page-para{
+    font-size: calc(10px + 1vw);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 40px;
+    padding: 10px 30px;
+    text-align: justify;
+}
+
+
+
+/*--------------------------------------------------------------------------------------*/
+
+/*footer*/
+
+footer{
+    height:60px;
+    background-color: #000;
+    padding:10px 40px;
+    display: flex;
+    align-items: center;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.credits{
+    color:#fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    margin: 0;
+    line-height: 22px;
+    font-size: calc(8px + 0.5vw);
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*For devices below 600px*/
+
+@media only screen and (max-width:600px) and (min-width:401px){
+    .sub-heading{
+        font-size: calc(15px + 1vw);
+    }
+
+    h1{
+        font-size: calc(35px + 3vw);
+        margin-top: -20px;
+    }
+
+    .catchy-phrase{
+        top:50px;
+        font-size: calc(11px + 0.7vw);
+        letter-spacing: calc(2px + 0.7vw);
+        padding-left: 10px;
+    }
+
+    /*line style*/
+    .sub-head-line{
+        margin:20px 50px;
+    }
+
+    /*info list*/
+    .info-head{
+        font-size: 180%;
+    }
+
+    .info-content{
+        font-size: calc(15px + 1vw);
+        line-height: 33px;
+        margin: 0 8vw;
+    }
+
+    /*quote*/
+    .quote{
+        font-size: calc(15px + 1vw);
+    }
+
+    .quotes-grid{
+        padding:50px 0;
+    }
+
+    /* II grid span*/
+
+    .grid-column-span{
+        grid-column-start: 1;
+        grid-column: span 2;
+    }
+
+    .grid-row-span{
+        grid-row: span 1;
+    }
+
+    /*home page content*/
+
+    .popular-quotes-grid, .quotes-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*quote topic*/
+    .quote-topic-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .quote-topic{
+        font-size: calc(15px + 1vw);
+    }
+
+
+
+    .main-quote-topic{
+        font-size: calc(20px + 4vw);
+    }
+    
+    /*-----------------------------------------Sample------------------------*/
+    .quote-page-topic-links{
+        text-decoration: none;
+        -webkit-text-stroke: 0.5px #fff;
+        color: transparent;
+        letter-spacing: 7px;
+        font-variant: small-caps;
+        transition: color 250ms;
+    }
+    
+    .l{
+        text-align: center;
+    }
+    .r{
+        text-align: center;
+    }
+    
+    .quote-topic-main-a-grid{
+        grid-auto-rows: 70px;
+        padding:10px 0;
+    }
+
+    /*-----------------------------------------Sample-end------------------------*/
+
+    /*About page style*/
+    .about-page-greeting{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: calc(2vw + 30px);
+    }
+
+    .about-page-para{
+        font-size: calc(10px + 1vw);
+        line-height: calc(2vw + 20px);
+        padding: 20px 2vw;
+    }
+
+   /*--------------------------------------------------------------------------------------*/
+
+    .special-case{
+        grid-column-start: 0;
+        grid-column: span 1;
+    }
+
+    footer{
+        height:50px;
+        position: static;
+    }
+    .credits{
+        line-height: 15px;
+        font-size: calc(10px + 0.5vw);
+    }
+
+    /*quote page quote links style*/
+
+    .quote-topic-main-grid{
+        grid-template-columns: repeat(2, 1fr);
+        padding:0 1vw 50px 1vw;
+    }
+    .other-quote-topics-grid{
+        grid-auto-columns: 150px;
+    }
+
+}
+
+/*-----------------------------End of Tab media query--------------------------*/
+
+/*For Mobile Phones*/
+
+@media only screen and (max-width:400px){
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    header{
+        height: 80px;
+    }
+
+    h1{
+        font-size: calc(25px + 4vw);
+        position: relative;
+        margin-top:-20px;
+    }
+
+    .catchy-phrase{
+        display: block;
+        position: absolute;
+        color: #fff;
+        top:35px;
+        font-size: calc(12px + 0.5vw);
+        letter-spacing: 3px;
+        font-weight: lighter;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        padding-left: 2px;
+    }
+    
+    /*Nav menu*/ /*info button*/
+    #navmenu{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        top:80px;
+    }
+    .nav-links a{
+        font-size: calc(15px + 1vw);
+    }
+    .menu-bar-cont, .info-button{
+        transform: scale(0.9, 0.9);
+    }    
+
+    /*line style*/
+    .sub-head-line{
+        margin:20px 50px;
+    }
+
+    /*info list*/
+    .info-list{
+        top:70px;
+    }
+    .info-head{
+        font-size: 140%;
+    }
+
+    .info-content{
+        font-size: calc(15px + 1vw);
+        line-height: 25px;
+        margin: 0 5vw;
+    }
+
+    /*Main content*/
+    .home-page-content{
+        padding: 5px 20px 50px 20px;
+    }
+    .sub-heading{
+        font-size: calc(16px + 1vw);
+    }
+    /*------------------------------------------*/
+    /*home page content*/
+
+    .popular-quotes-grid, .quotes-grid{
+        grid-template-columns: 1fr;
+        gap:10px;
+    }
+
+    .quotes-grid{
+        padding:20px 0;
+        gap:15px;
+    }
+    /*------------------------------------------*/
+    /* II grid span*/
+
+    .grid-column-span, .special-case{
+        grid-column: span 1;
+    }
+    /*------------------------------------------*/
+    /*quote topic*/
+    .quote-topic-grid{
+        grid-template-columns: 1fr;
+        gap:15px;
+    }
+
+    .quote-topic{
+        font-size: calc(17px + 1.5vw);
+    }
+    
+    .quote-topic-main-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding:0 0 50px 0;
+        grid-auto-rows: 65px;
+    }
+
+    /*quote*/
+    .quote{
+        font-size: calc(15px + 1vw);
+    }
+
+    /*------------------------------------------*/
+
+    /*About page style*/
+    .about-page-greeting{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: calc(2vw + 20px);
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .about-page-para{
+        font-size: calc(10px + 1vw);
+        line-height: 22px;
+        padding: 20px 3vw;
+    }
+
+   /*--------------------------------------------------------------------------------------*/
+
+    /* Quote page style*/
+    .other-quote-topics-grid{
+        grid-auto-columns: 140px;
+        grid-template-rows: 60px;
+        gap:10px;
+        padding: 15px 0 5px 0;
+    }
+
+    /*footer*/
+    footer{
+        height:50px;
+        padding:10px 20px;
+        position: static;
+    }
+
+    .credits{
+        line-height: 15px;
+        font-size: calc(10px + 1vw);
+    }
+}

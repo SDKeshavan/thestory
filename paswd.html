@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dev</title>
+<link rel="stylesheet" href="pswdcss.css">
+<meta name="viewport" content="width=device-width, initialscale=1">
+</head>
+<body>
+
+	<div id="pswdcont">
+		<div id="pswdbox">
+			<input type="password" id="pswd">
+			<button type="button" onclick="pswdfunc()" class="sub">Submit</button><br>
+			<p id="dis"></p>
+		</div>
+	</div>
+	<div id="MainWeb">
+		<header>
+			<div class="title-cont">
+				<h1>The Secret Vault</h1>
+			</div>
+		</header>
+			
+			
+		<div id="main">
+			<div class="page a">
+				<div class="cir">
+					<h3 class="story-name">The Great Story</h3>
+					<hr class="line">
+					<p class="description">
+						This is a true story of Man<br>who changed the 
+						meaning of ____!
+					</p>
+					<div class="button-cont"><a class="button" href="#">Read Now!</a></div>
+				</div>
+			</div>
+			<div class="page b">
+				<div class="cir">
+					<h3 class="story-name">The USL</h3>
+					<hr class="line">
+					<p class="description">
+						This is a true story of Man<br>who changed the 
+						meaning of ____!
+					</p>
+					<div class="button-cont"><a class="button" href="#">Read Now!</a></div>
+				</div>
+			</div>
+			<div class="page c">
+				<div class="cir">
+					<h3 class="story-name">The Great Story</h3>
+					<hr class="line">
+					<p class="description">
+						This is a true story of Man<br>who changed the 
+						meaning of ____!
+					</p>
+					<div class="button-cont"><a class="button" href="#">Read Now!</a></div>
+				</div>
+			</div>
+			<div class="page d">
+				<div class="cir">
+					<h3 class="story-name">Dev's Log</h3>
+					<hr class="line">
+					<p class="description">
+						The official log of<br>
+						Dev's College days
+					</p>
+					<div class="button-cont"><a class="button" href="#">Read Now!</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function pswdfunc(){
+			psd=document.getElementById("pswd").value;
+			if(psd=="jwedsr"){
+			document.getElementById("MainWeb").style.display="block";
+			document.getElementById("pswdbox").style.display="none";
+			document.getElementById("pswdcont").style.display="none";
+			document.body.style.background="none";
+			}
+			else{
+			document.getElementById("dis").innerHTML="Incorrect Password";
+			}
+		}
+		</script>
+</body>
+</html>
